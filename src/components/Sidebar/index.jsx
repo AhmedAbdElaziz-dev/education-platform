@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { sidebarItems } from "./constants";
 
 function Sidebar() {
@@ -9,10 +10,12 @@ function Sidebar() {
             <img src="./src/assets/logo.png" />
           </li>
           {sidebarItems.map((item, index) => (
-            <div className="p-2 flex flex-col items-center" key={index}>
-              <item.icon className="h-6 w-6" />
-              <li>{item.label}</li>
-            </div>
+            <Link to={item.to} key={index}>
+              <div className="p-2 flex flex-col items-center">
+                <item.icon className="h-6 w-6" />
+                <li>{item.label}</li>
+              </div>
+            </Link>
           ))}
         </ul>
 
