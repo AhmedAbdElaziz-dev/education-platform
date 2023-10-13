@@ -1,21 +1,26 @@
+/* eslint-disable react/prop-types */
 import { BookmarkIcon } from "@heroicons/react/20/solid";
 
-function CourseCard() {
-  const progress = "36";
+function CourseCard({
+  imgSrc = "./src/assets/profile.jpg",
+  title = "Recommended Courses",
+  discription = "Digital Markting 101",
+  progress = 36,
+}) {
   return (
-    <div className=" flex bg-gray-100 h-fit rounded p-1">
+    <div className=" flex bg-gray-100 h-fit rounded p-1 mb-5">
       <div className="w-56">
-        <img src="./src/assets/profile.jpg" className="rounded-lg" />
+        <img src={imgSrc} className="rounded-lg" />
       </div>
       <div className="w-full p-3">
         <div className=" flex justify-between mb-1">
-          <h1 className="font-semibold">Recommended Courses</h1>
+          <h1 className="font-semibold">{title}</h1>
           <div className="border-solid border-x-black border-y-black border rounded-md p-1 ">
             <BookmarkIcon className="h-4 w-4" />
           </div>
         </div>
 
-        <p className="text-sm mb-2">Digital Markting 101</p>
+        <p className="text-sm mb-2">{discription}</p>
         <div className="flex rounded-full h-2 bg-gray-200 mb-3">
           <div
             style={{ width: `${progress}%` }}
@@ -27,4 +32,5 @@ function CourseCard() {
     </div>
   );
 }
+
 export default CourseCard;

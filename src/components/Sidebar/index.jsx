@@ -4,9 +4,9 @@ import { sidebarItems } from "./constants";
 function Sidebar() {
   return (
     <>
-      <div className="h-screen w-1/12 bg-slate-200 flex flex-col items-center space-y-80 ">
+      <div className="h-screen bg-zinc-100 flex flex-col justify-between ">
         <ul>
-          <li className="mt-10 mb-16 w-3/4 m-auto ">
+          <li className=" mt-10 mb-16 w-14 m-auto ">
             <img src="./src/assets/logo.png" />
           </li>
           {sidebarItems.map((item, index) => (
@@ -19,7 +19,7 @@ function Sidebar() {
           ))}
         </ul>
 
-        <div className="w-20">
+        <div className="w-20 mt-5 p-2">
           <img src="./src/assets/profile.jpg" className="rounded-full" />
         </div>
       </div>
