@@ -1,4 +1,10 @@
+import FeaturesCourse from "../../components/FeaturedCourse";
+
 function Home() {
-  return <div>home</div>;
+  return (
+    <div>
+      <FeaturesCourse />
+    </div>
+  );
 }
 export default Home;
