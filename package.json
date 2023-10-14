@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "axios": "^1.5.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-charts": "^4.0.1",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
