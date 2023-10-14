@@ -4,7 +4,7 @@ import { sidebarItems } from "./constants";
 function Sidebar() {
   return (
     <>
-      <div className="h-screen bg-zinc-100 flex flex-col justify-between ">
+      <div className="w[80px] h-screen bg-zinc-100 flex flex-col justify-between ">
         <ul>
           <li className=" mt-10 mb-16 w-14 m-auto ">
             <img src="./src/assets/logo.png" />
