@@ -10,10 +10,10 @@ function CourseDetails({
 }) {
   return (
     <div className="flex flex-col justify-between bg-zinc-100 p-10">
-      <div className="h-1/2 mb-5 ">
+      <div className="h-1/2 w-full">
         <img
           src="./src/assets/profile.jpg"
-          className="w-full h-full rounded-lg "
+          className="h-full w-full rounded-lg object-cover"
         />
       </div>
       <div>
