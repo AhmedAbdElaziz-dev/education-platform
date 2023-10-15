@@ -5,8 +5,8 @@ import { cources } from "./constants";
 
 function Courses() {
   return (
-    <div className="w-full h-full flex ">
-      <div className="w-1/2 flex flex-col pt-14 pl-5 pr-5 box-border">
+    <div className="w-full h-full md:flex ">
+      <div className="w-1/2 max-md:w-full flex flex-col pt-14 pl-5 pr-5 box-border">
         <header className="flex justify-between mb-10 ">
           <h1 className="text-3xl f">Discover</h1>
           <div className="flex items-center">
@@ -16,7 +16,7 @@ function Courses() {
             <label className="ml-2">Find new</label>
           </div>
         </header>
-        <div className="overflow-auto mb-10">
+        <div className="md:w-full overflow-auto mb-10">
           <CourseList cources={cources} />
         </div>
       </div>

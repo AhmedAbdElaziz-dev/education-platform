@@ -6,12 +6,12 @@ import { cources, featuredCourses } from "./constants";
 function Home() {
   return (
     <div className="w-full">
-      <div className="w-full flex p-10">
-        <div className=" w-1/2">
+      <div className="w-full flex p-10 max-md:flex-col">
+        <div className=" w-1/2 max-md:w-full">
           <h1 className="text-3xl font-medium mb-5">Performance</h1>
           <LineChart />
         </div>
-        <div className=" w-1/2 ">
+        <div className=" w-1/2 max-md:w-full ">
           <h1 className="text-3xl font-medium mb-5">MyProgress</h1>
           <div className="h-96 overflow-x-auto">
             <CourseList cources={cources} />

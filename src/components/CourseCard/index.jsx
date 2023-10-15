@@ -8,14 +8,14 @@ function CourseCard({
   progress = 36,
 }) {
   return (
-    <div className=" flex bg-gray-100 h-fit rounded p-1 mb-5">
-      <div className="w-56">
+    <div className=" flex bg-gray-100 h-fit rounded p-1 mb-5 max-[450px]:flex-col">
+      <div className="w-56 max-[450px]:w-full">
         <img src={imgSrc} className="rounded-lg" />
       </div>
       <div className="w-full p-3">
         <div className=" flex justify-between mb-1">
           <h1 className="font-semibold">{title}</h1>
-          <div className="border-solid border-x-black border-y-black border rounded-md p-1 ">
+          <div className="h-fit border-solid border-x-black border-y-black border rounded-md p-1 ">
             <BookmarkIcon className="h-4 w-4" />
           </div>
         </div>

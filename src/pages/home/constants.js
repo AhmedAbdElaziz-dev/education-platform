@@ -33,6 +33,7 @@ export const featuredCourses = [
     duration: "1h 53m",
     rate: "3.5/5.0",
   },
+
   {
     auther: "Auther",
     title: "Power BI",

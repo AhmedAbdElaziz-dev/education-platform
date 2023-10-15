@@ -7,11 +7,11 @@ function Layout() {
   const [isCollapse, setIsCollapse] = useState(false);
 
   return (
-    <div className="p-0 m-0 flex flex-col relative">
+    <div className="w-full h-full p-0 m-0 flex flex-col relative">
       <Header />
-      <div className="p-0 m-0 flex">
+      <div className="w-full h-full p-0 m-0 flex">
         <Sidebar isCollapse={isCollapse} setIsCollapse={setIsCollapse} />
-        <div className={isCollapse ? "w-full" : "w-[calc(100%-80px)]"}>
+        <div className="w-full ml-[70px]">
           <Outlet />
         </div>
         {/* <Sidebar />
