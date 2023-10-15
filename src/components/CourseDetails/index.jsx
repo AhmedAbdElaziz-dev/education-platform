@@ -32,10 +32,10 @@ function CourseDetails({
         <p className="text-sm">{discription}</p>
       </div>
       <div className="flex justify-around mt-5">
-        <button className="w-1/3 border p-2 rounded-md bg-white border-black">
+        <button className="h-fit w-1/3  border p-2 rounded-md bg-white border-black  max-md:text-sm ">
           Review course
         </button>
-        <button className="w-1/3 border p-2 rounded-md text-white bg-red-700 ">
+        <button className="h-fit  w-1/3  border p-2 rounded-md text-white bg-red-700 max-md:text-sm ">
           Continue learning
         </button>
       </div>
