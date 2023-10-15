@@ -9,8 +9,8 @@ function CourseDetails({
   mastering digital markting and learning how to promote your business`,
 }) {
   return (
-    <div className="flex flex-col justify-between bg-zinc-100 p-10">
-      <div className="h-1/2 w-full">
+    <div className="h-full w-full flex flex-col justify-between p-10">
+      <div className="h-96 w-full">
         <img
           src="./src/assets/profile.jpg"
           className="h-full w-full rounded-lg object-cover"
