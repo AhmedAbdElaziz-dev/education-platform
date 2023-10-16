@@ -1,6 +1,14 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable no-empty */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/display-name */
 import CourseList from "../../components/CourseList";
 import FeaturesCourse from "../../components/FeaturedCourse";
 import { LineChart } from "../../components/LineChart";
+import { Skeleton } from "../../components/Skeletons";
+import useGetCoursesProgress from "../../hooks/useGetCoursesProgress";
+import useGetFeaturedCourses from "../../hooks/useGetFeaturedCourses";
+import useGetPerformenceChart from "../../hooks/useGetPerformenceChart";
 import { cources, featuredCourses } from "./constants";
 
 function Home() {
@@ -31,4 +39,33 @@ function Home() {
     </div>
   );
 }
-export default Home;
+
+export default () => {
+  const {
+    featuredCourses,
+    isError: isFeaturedCoursesError,
+    isLoading: isFeaturedCoursesLoading,
+  } = useGetFeaturedCourses();
+  const {
+    courcessProgress,
+    isError: isCoursesProgressError,
+    isLoading: isCoursesProgressLoading,
+  } = useGetCoursesProgress();
+  const {
+    performanceData,
+    isError: isPerformenceChartError,
+    isLoading: isPerformenceChartLoading,
+  } = useGetPerformenceChart();
+  if (
+    !courcessProgress ||
+    !performanceData ||
+    !featuredCourses ||
+    isFeaturedCoursesLoading ||
+    isCoursesProgressLoading ||
+    isPerformenceChartLoading
+  ) {
+    return <Skeleton />;
+  }
+  const homeData = { courcessProgress, performanceData, featuredCourses };
+  return <Home homeData={homeData} />;
+};

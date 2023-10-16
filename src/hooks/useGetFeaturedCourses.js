@@ -11,8 +11,9 @@ const useGetFeaturedCourses = () => {
       staleTime: 0,
     }
   );
-  const courcessData = get(data, "data.data");
-  return { courcessData, isError, isLoading };
+
+  const featuredCourses = get(data, "data");
+  return { featuredCourses, isError, isLoading };
 };
 
 export default useGetFeaturedCourses;
