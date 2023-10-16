@@ -10,23 +10,36 @@ import useGetCoursesProgress from "../../hooks/useGetCoursesProgress";
 import useGetFeaturedCourses from "../../hooks/useGetFeaturedCourses";
 import useGetPerformenceChart from "../../hooks/useGetPerformenceChart";
 import { cources, featuredCourses } from "./constants";
+import { UserGroupIcon } from "@heroicons/react/20/solid";
 
 function Home() {
   return (
     <div className="w-full">
-      <div className="w-full flex p-10 max-md:flex-col">
+      <div className="flex items-center pt-10 pl-10 border-box">
+        <div className="w-24 mr-5">
+          <img src="./src/assets/profile.jpg" className="rounded-full" />
+        </div>
+        <div>
+          <h1 className="text-xl font-medium">John Doe</h1>
+          <div className="flex">
+            <UserGroupIcon className="h-6 w-6 mr-2" />
+            <p>Advitalize LLC</p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex p-10 max-md:flex-col border-box">
         <div className=" w-1/2 max-md:w-full">
           <h1 className="text-3xl font-medium mb-5">Performance</h1>
           <LineChart />
         </div>
         <div className=" w-1/2 max-md:w-full ">
           <h1 className="text-3xl font-medium mb-5">MyProgress</h1>
-          <div className="h-96 overflow-x-auto">
+          <div className="h-80 overflow-x-auto">
             <CourseList cources={cources} />
           </div>
         </div>
       </div>
-      <div className="w-3/4 m-auto mt-10 ">
+      <div className="w-3/4 m-auto border-box">
         <h1 className="text-3xl font-medium mb-5 ">Featured Courses</h1>
         <div className="flex overflow-x-auto">
           {featuredCourses.map((featuredCours, index) => (
