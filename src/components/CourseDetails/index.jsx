@@ -1,5 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/display-name */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { ClockIcon, StarIcon } from "@heroicons/react/20/solid";
+import useGetCourseById from "../../hooks/useGetCourseById";
+import { Skeleton } from "../Skeletons";
 
 function CourseDetails({
   title = "Recomended Courses",
@@ -42,4 +47,11 @@ function CourseDetails({
     </div>
   );
 }
-export default CourseDetails;
+export default ({ id }) => {
+  console.log("id", id);
+  const { course, isError, isLoading } = useGetCourseById(id);
+  if (!course || isLoading) {
+    return <Skeleton />;
+  }
+  return <CourseDetails {...course} />;
+};

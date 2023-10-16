@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import get from "lodash/get";
-import courcesEndpoints from "../api/courses";
+import courcesEndpoints from "../apis/courses";
 
 const useGetCoursesProgress = () => {
   const { data, isError, isLoading } = useQuery(
@@ -11,8 +11,8 @@ const useGetCoursesProgress = () => {
       staleTime: 0,
     }
   );
-  const courcessData = get(data, "data.data");
-  return { courcessData, isError, isLoading };
+  const courcessProgress = get(data, "data");
+  return { courcessProgress, isError, isLoading };
 };
 
 export default useGetCoursesProgress;

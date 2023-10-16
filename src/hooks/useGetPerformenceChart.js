@@ -11,8 +11,9 @@ const useGetPerformenceChart = () => {
       staleTime: 0,
     }
   );
-  const courcessData = get(data, "data.data");
-  return { courcessData, isError, isLoading };
+
+  const performanceData = get(data, "data");
+  return { performanceData, isError, isLoading };
 };
 
 export default useGetPerformenceChart;

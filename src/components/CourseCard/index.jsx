@@ -6,9 +6,20 @@ function CourseCard({
   title = "Recommended Courses",
   discription = "Digital Markting 101",
   progress = 36,
+  setCourseId,
+  selectedCourseId = 1,
+  id,
 }) {
+  const isSelected = selectedCourseId === id;
   return (
-    <div className=" flex bg-gray-100 h-fit rounded p-1 mb-5 max-[450px]:flex-col">
+    <div
+      className={` flex ${
+        isSelected ? "bg-white" : "bg-gray-100"
+      } hover:cursor-pointer h-fit rounded p-1 mb-5 max-[450px]:flex-col`}
+      onClick={() => {
+        setCourseId(id);
+      }}
+    >
       <div className="w-56 max-[450px]:w-full">
         <img src={imgSrc} className="rounded-lg" />
       </div>

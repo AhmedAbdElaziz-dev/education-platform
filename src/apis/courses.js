@@ -1,10 +1,11 @@
 import axios from "./axiosInstance";
 
 const coursesEndpoints = {
-  progress: "",
-  featured: "",
-  courses: "",
-  performance: "",
+  progress: "users",
+  featured: "users",
+  courses: "users",
+  performance: "users",
+  course: "users",
 };
 
 const courses = {
@@ -19,6 +20,9 @@ const courses = {
   },
   getPerformanceChart() {
     return axios.get(coursesEndpoints.performance);
+  },
+  getCourseById(id) {
+    return axios.get(`${coursesEndpoints.courses}/${id}`);
   },
 };
 
