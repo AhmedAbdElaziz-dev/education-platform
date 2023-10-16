@@ -11,7 +11,7 @@ function Layout() {
       <Header />
       <div className="w-full h-full p-0 m-0 flex">
         <Sidebar isCollapse={isCollapse} setIsCollapse={setIsCollapse} />
-        <div className="w-full ml-[70px]">
+        <div className="w-full pl-[70px] border-box">
           <Outlet />
         </div>
         {/* <Sidebar />
